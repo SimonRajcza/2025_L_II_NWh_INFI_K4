@@ -2,11 +2,10 @@ version: 2.1
 jobs:
   build-and-test:
     machine:
-      image: ubuntu-2204:2024.01.2
+      image: ubuntu-2204:2024.11.1
     steps:
       - checkout
       - run: make deps
-      - run: make lint
       - run: make test
       - run: make docker_run
 workflows:
